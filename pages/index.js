@@ -1,17 +1,13 @@
 // pages/index.js
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Home() {
-  const router = useRouter();
-
-  const navigateToAboutPage = () => {
-    router.push('/about');
-  };
-
   return (
     <div>
       <h1>Welcome to My Next.js Website</h1>
-      <button onClick={navigateToAboutPage}>Go to About Us</button>
+      <Link href="/about">
+        <a>About Us</a>
+      </Link>
     </div>
   );
 }
